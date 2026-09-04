@@ -1,93 +1,141 @@
 # Basic Unit Converter
 
-#### Video Demo: https://www.youtube.com/watch?v=ZCwjwMUAR9o
+**Basic Unit Converter** is a Python command-line application developed as a final project for **CS50's Introduction to Programming with Python (CS50P)**.
 
-#### Description:
+#### Video Demo
 
-The **Basic Unit Converter** is a Python command-line application developed as a final project for **CS50's Introduction to Programming with Python (CS50P)**. The purpose of this application is to provide a simple and user-friendly way to convert values between different units across multiple categories.
+https://www.youtube.com/watch?v=ZCwjwMUAR9o
 
-The application allows users to select a conversion category, choose the units they want to convert from and to, enter a value, and receive the converted result. It supports several commonly used categories, including **length, temperature, mass, area, volume, speed, time, and digital data**.
+## Description
 
-The project was designed to apply fundamental Python programming concepts learned throughout CS50P, including functions, loops, conditional statements, dictionaries, exception handling, user input validation, and modular program design.
+The **Basic Unit Converter** provides a simple and interactive way to convert numerical values between different units.
 
----
+When the program starts, users can select a conversion category, choose the units they want to convert **from** and **to**, enter a value, and receive the converted result.
 
-### Core Features
+The application supports several commonly used conversion categories:
 
-1. **Multiple Conversion Categories**: Supports length, temperature, mass, area, volume, speed, time, and digital data conversions.
-2. **Interactive Command-Line Interface**: Provides a simple menu-based interface that guides users through the conversion process.
-3. **Multiple Units**: Each category includes multiple commonly used units for flexible conversions.
-4. **Accurate Calculations**: Uses appropriate conversion factors and formulas for each supported unit.
-5. **Temperature Conversion**: Supports conversions between Celsius, Fahrenheit, and Kelvin using the appropriate formulas.
-6. **Input Validation**: Checks user input and handles invalid values and unsupported options.
-7. **Error Handling**: Uses exception handling to prevent the program from crashing because of invalid input.
-8. **Continuous Conversions**: Allows users to perform multiple conversions without restarting the application.
-9. **Clear Output**: Displays the converted value in an easy-to-understand format.
+* Length
+* Temperature
+* Mass
+* Area
+* Volume
+* Speed
+* Time
+* Digital Data
 
----
+The project was created to apply Python programming concepts learned throughout CS50P, including **functions, loops, conditional statements, dictionaries, exception handling, input validation, and automated testing**.
 
-### File Structure & Content Explanation
+## Features
 
-- **`project.py`**: Serves as the main program and contains the core functionality of the application. It defines:
-  - Unit conversion dictionaries and conversion factors.
-  - Functions responsible for performing conversions.
-  - Temperature conversion formulas.
-  - Input validation and error handling.
-  - `main()`: Controls the interactive command-line interface, accepts user input, manages the conversion process, and displays the results.
+* **Multiple Conversion Categories**
+  Supports length, temperature, mass, area, volume, speed, time, and digital data conversions.
 
-- **`test_project.py`**: Contains automated tests using the `pytest` framework to verify the correctness of the conversion functions. The tests cover different conversion categories, unit conversions, temperature calculations, and invalid input scenarios.
+* **Interactive Command-Line Interface**
+  Uses a menu-based interface to guide users through the conversion process.
 
-- **`requirements.txt`**: Specifies the external Python packages required for the project and its tests.
+* **Multiple Units**
+  Provides several units within each supported category.
 
-- **`README.md`**: Provides an overview of the project, its features, implementation details, installation instructions, and usage information.
+* **Accurate Conversions**
+  Uses conversion factors and mathematical formulas appropriate for each category.
 
----
+* **Temperature Conversion**
+  Supports Celsius, Fahrenheit, and Kelvin conversions using temperature-specific formulas.
 
-### Installation & Usage
+* **Input Validation**
+  Handles invalid values and unsupported menu options.
 
-1. **Clone the repository**:
+* **Error Handling**
+  Uses exception handling to prevent the program from terminating unexpectedly because of invalid input.
 
-   ```bash
-   git clone <your-repository-url>
-   cd <your-repository-folder>
-   ```
+* **Continuous Conversions**
+  Allows users to perform multiple conversions without restarting the program.
 
-2. **Install requirements**:
+* **Clear Results**
+  Displays the converted value in an easy-to-read format.
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Project Files
 
-3. **Run the application**:
+### `project.py`
 
-   ```bash
-   python project.py
-   ```
+The main Python program containing the application's core functionality. It includes:
 
-4. **Run unit tests**:
+* Conversion factors and unit dictionaries
+* Conversion functions
+* Temperature conversion formulas
+* Input validation
+* Error handling
+* The `main()` function, which controls the command-line interface
 
-   ```bash
-   pytest test_project.py
-   ```
+### `test_project.py`
 
----
+Contains automated tests written using **pytest** to verify the conversion functions and ensure that the program produces correct results for different conversion categories and input scenarios.
 
-### Example
+### `requirements.txt`
 
-When the application starts, the user is presented with a list of available conversion categories.
+Lists the external Python package required to run the project's automated tests.
 
-For example, selecting **Length** allows the user to choose a source unit and a target unit, enter a numerical value, and receive the converted result.
+### `README.md`
 
-The same process can be used for other categories such as **temperature, mass, area, volume, speed, time, and digital data**.
+Contains information about the project, its features, installation, usage, and implementation.
 
----
+## Installation
 
-### Design & Implementation
+### 1. Clone the repository
 
-The application uses Python dictionaries to organize supported units and their conversion factors. For conversions that require specific mathematical formulas, such as temperature, dedicated calculations are used.
+```bash
+git clone https://github.com/sij-an/cs50p-final-project.git
+cd cs50p-final-project
+```
 
-The program is divided into functions so that different parts of the application can be handled independently. This makes the code easier to read, maintain, and test.
+## Usage
 
-Input validation and exception handling are also used throughout the program to ensure that invalid user input is handled gracefully.
+Run the program with:
 
-Through this project, I applied the Python programming concepts learned throughout **CS50P** to build a practical command-line application from scratch.
+```bash
+python project.py
+```
+
+The program will display the available conversion categories and guide you through the conversion process.
+
+## Testing
+
+The project includes automated tests using **pytest**.
+
+To run the tests:
+
+```bash
+pytest test_project.py
+```
+
+
+## Design and Implementation
+
+The application uses Python dictionaries to organize units and their corresponding conversion factors. This allows conversions between units to be performed in a consistent and organized way.
+
+Temperature conversions are handled separately because they require mathematical formulas rather than simple multiplication or division by a conversion factor.
+
+The program is organized into separate functions for different tasks. This makes the code easier to understand, maintain, and test.
+
+Input validation and exception handling are used to ensure that invalid user input is handled without causing the program to crash.
+
+## What I Learned
+
+Through this project, I applied the Python programming concepts covered in **CS50P** to create a practical command-line application.
+
+The project helped me improve my understanding of:
+
+* Writing and organizing functions
+* Using dictionaries to store and access data
+* Loops and conditional statements
+* Exception handling with `try` and `except`
+* Validating user input
+* Writing automated tests with pytest
+* Designing a command-line application
+* Organizing a Python project
+
+## Author
+
+**Sijan Upreti**
+
+T
